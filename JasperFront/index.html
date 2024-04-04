@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>JASPER REPORT</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="img/logo-color.png" alt="" />
+          </div>
+          <nav>
+            <div class="btn">
+              <i class="fa fa-times close-btn"></i>
+            </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </nav>
+          <div class="btn">
+            <i class="fa fa-bars menu-btn"></i>
+          </div>
+        </div>
+      </div>
+
+      
+    </header>
+    <section>
+      <div class="content">
+        <h2>Email Report Form</h2>
+        <form action="submit_email.php" method="POST" onsubmit="return false;" id="reportForm">
+            <label for="report_type">Select Report Type:</label>
+            <select id="report_type" name="report_type">
+                <option value="log">Log Reports</option>
+                <option value="payment">Payment Reports</option>
+            </select>
+            <label for="call_type">Select Report Embedding call to be made :</label>
+            <select id="call_type" name="call_type">
+              <option value="HTTP">HTTP</option>
+              <option value="REST">REST</option>
+          </select>
+
+            <label for="parameter">Email Parameter:</label>
+            <input type="text" id="parameter" name="parameter" required>
+
+            <input type="submit" value="Submit" onclick="getReport()">
+        </form>
+    </div>
+    <div id="loader" class="loader"></div>
+      </section>
+      <script src="js/app.js" type="application/javascript">
+
+      </script>
+      </body>
+      </html>
